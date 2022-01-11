@@ -135,7 +135,10 @@ class Fdwp_Admin {
 			'query_var' => true,
 			'rewrite' => true,
 			'capability_type' => 'post',
+			'show_in_graphql' => true,
 			'hierarchical' => true,
+			'graphql_single_name' => 'faq',
+			'graphql_plural_name' => 'faqs',
 			'has_archive' => false,
 			'show_in_rest' => true,
 			'supports' => array('title', 'editor')
