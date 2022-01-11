@@ -141,7 +141,7 @@ class Fdwp_Admin {
 			'graphql_plural_name' => 'faqs',
 			'has_archive' => false,
 			'show_in_rest' => true,
-			'supports' => array('title', 'editor')
+			'supports' => array('title', 'editor', 'excerpt')
 		);
 
 		register_post_type( 'faq' , $args );
