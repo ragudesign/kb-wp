@@ -111,7 +111,7 @@ class Kbwp_Admin {
 			'singular_name' => _x('Knowledge Base', 'post type singular name'),
 			'menu_name' => _x('Knowledge Base', 'post type singular name'),
 			'add_new' => _x('Add new', 'ir'),
-			'add_new_item' => __('Add new FAQ'),
+			'add_new_item' => __('Add new KB'),
 			'edit_item' => __('Edit KB'),
 			'new_item' => __('New KB'),
 			'view_item' => __('View KB'),
