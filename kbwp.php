@@ -3,18 +3,18 @@
 /**
  * @link              ragudev.com
  * @since             1.0.0
- * @package           Fdwp
+ * @package           Kbwp
  *
  * @wordpress-plugin
- * Plugin Name:       FAQ Desk WP
+ * Plugin Name:       Knowledge Base WP
  * Plugin URI:        ragudev.com
- * Description:       Install this plugin to get the FAQ post types
+ * Description:       Install this plugin to get the Knowledge Base CPT
  * Version:           1.0.0
  * Author:            ragu
  * Author URI:        ragudev.com
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
- * Text Domain:       fdwp
+ * Text Domain:       kbwp
  * Domain Path:       /languages
  */
 
@@ -30,30 +30,30 @@ define( 'FDWP_VERSION', '1.0.0' );
 
 /**
  * The code that runs during plugin activation.
- * This action is documented in includes/class-fdwp-activator.php
+ * This action is documented in includes/class-kbwp-activator.php
  */
-function activate_fdwp() {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-fdwp-activator.php';
-	Fdwp_Activator::activate();
+function activate_kbwp() {
+	require_once plugin_dir_path( __FILE__ ) . 'includes/class-kbwp-activator.php';
+	Kbwp_Activator::activate();
 }
 
 /**
  * The code that runs during plugin deactivation.
- * This action is documented in includes/class-fdwp-deactivator.php
+ * This action is documented in includes/class-kbwp-deactivator.php
  */
-function deactivate_fdwp() {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-fdwp-deactivator.php';
-	Fdwp_Deactivator::deactivate();
+function deactivate_kbwp() {
+	require_once plugin_dir_path( __FILE__ ) . 'includes/class-kbwp-deactivator.php';
+	Kbwp_Deactivator::deactivate();
 }
 
-register_activation_hook( __FILE__, 'activate_fdwp' );
-register_deactivation_hook( __FILE__, 'deactivate_fdwp' );
+register_activation_hook( __FILE__, 'activate_kbwp' );
+register_deactivation_hook( __FILE__, 'deactivate_kbwp' );
 
 /**
  * The core plugin class that is used to define internationalization,
  * admin-specific hooks, and public-facing site hooks.
  */
-require plugin_dir_path( __FILE__ ) . 'includes/class-fdwp.php';
+require plugin_dir_path( __FILE__ ) . 'includes/class-kbwp.php';
 
 /**
  * Begins execution of the plugin.
@@ -64,10 +64,10 @@ require plugin_dir_path( __FILE__ ) . 'includes/class-fdwp.php';
  *
  * @since    1.0.0
  */
-function run_fdwp() {
+function run_kbwp() {
 
-	$plugin = new Fdwp();
+	$plugin = new Kbwp();
 	$plugin->run();
 
 }
-run_fdwp();
+run_kbwp();

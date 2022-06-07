@@ -6,8 +6,8 @@
  * @link       ragudev.com
  * @since      1.0.0
  *
- * @package    Fdwp
- * @subpackage Fdwp/public
+ * @package    Kbwp
+ * @subpackage Kbwp/public
  */
 
 /**
@@ -16,11 +16,11 @@
  * Defines the plugin name, version, and two examples hooks for how to
  * enqueue the public-facing stylesheet and JavaScript.
  *
- * @package    Fdwp
- * @subpackage Fdwp/public
+ * @package    Kbwp
+ * @subpackage Kbwp/public
  * @author     ragu <me@ragudev.com>
  */
-class Fdwp_Public {
+class Kbwp_Public {
 
 	/**
 	 * The ID of this plugin.
@@ -65,15 +65,15 @@ class Fdwp_Public {
 		 * This function is provided for demonstration purposes only.
 		 *
 		 * An instance of this class should be passed to the run() function
-		 * defined in Fdwp_Loader as all of the hooks are defined
+		 * defined in Kbwp_Loader as all of the hooks are defined
 		 * in that particular class.
 		 *
-		 * The Fdwp_Loader will then create the relationship
+		 * The Kbwp_Loader will then create the relationship
 		 * between the defined hooks and the functions defined in this
 		 * class.
 		 */
 
-		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/fdwp-public.css', array(), $this->version, 'all' );
+		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/kbwp-public.css', array(), $this->version, 'all' );
 
 	}
 
@@ -88,15 +88,15 @@ class Fdwp_Public {
 		 * This function is provided for demonstration purposes only.
 		 *
 		 * An instance of this class should be passed to the run() function
-		 * defined in Fdwp_Loader as all of the hooks are defined
+		 * defined in Kbwp_Loader as all of the hooks are defined
 		 * in that particular class.
 		 *
-		 * The Fdwp_Loader will then create the relationship
+		 * The Kbwp_Loader will then create the relationship
 		 * between the defined hooks and the functions defined in this
 		 * class.
 		 */
 
-		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/fdwp-public.js', array( 'jquery' ), $this->version, false );
+		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/kbwp-public.js', array( 'jquery' ), $this->version, false );
 
 	}
 

@@ -22,7 +22,7 @@
  * @link       ragudev.com
  * @since      1.0.0
  *
- * @package    Fdwp
+ * @package    Kbwp
  */
 
 // If uninstall not called from WordPress, then exit.

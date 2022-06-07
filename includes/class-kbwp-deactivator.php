@@ -6,8 +6,8 @@
  * @link       ragudev.com
  * @since      1.0.0
  *
- * @package    Fdwp
- * @subpackage Fdwp/includes
+ * @package    Kbwp
+ * @subpackage Kbwp/includes
  */
 
 /**
@@ -16,11 +16,11 @@
  * This class defines all code necessary to run during the plugin's deactivation.
  *
  * @since      1.0.0
- * @package    Fdwp
- * @subpackage Fdwp/includes
+ * @package    Kbwp
+ * @subpackage Kbwp/includes
  * @author     ragu <me@ragudev.com>
  */
-class Fdwp_Deactivator {
+class Kbwp_Deactivator {
 
 	/**
 	 * Short Description. (use period)

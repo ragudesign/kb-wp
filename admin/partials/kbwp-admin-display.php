@@ -8,8 +8,8 @@
  * @link       ragudev.com
  * @since      1.0.0
  *
- * @package    Fdwp
- * @subpackage Fdwp/admin/partials
+ * @package    Kbwp
+ * @subpackage Kbwp/admin/partials
  */
 ?>
 

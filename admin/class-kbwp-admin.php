@@ -6,8 +6,8 @@
  * @link       ragudev.com
  * @since      1.0.0
  *
- * @package    Fdwp
- * @subpackage Fdwp/admin
+ * @package    Kbwp
+ * @subpackage Kbwp/admin
  */
 
 /**
@@ -16,11 +16,11 @@
  * Defines the plugin name, version, and two examples hooks for how to
  * enqueue the admin-specific stylesheet and JavaScript.
  *
- * @package    Fdwp
- * @subpackage Fdwp/admin
+ * @package    Kbwp
+ * @subpackage Kbwp/admin
  * @author     ragu <me@ragudev.com>
  */
-class Fdwp_Admin {
+class Kbwp_Admin {
 
 	/**
 	 * The ID of this plugin.
@@ -64,15 +64,15 @@ class Fdwp_Admin {
 		/**
 		 *
 		 * An instance of this class should be passed to the run() function
-		 * defined in Fdwp_Loader as all of the hooks are defined
+		 * defined in Kbwp_Loader as all of the hooks are defined
 		 * in that particular class.
 		 *
-		 * The Fdwp_Loader will then create the relationship
+		 * The Kbwp_Loader will then create the relationship
 		 * between the defined hooks and the functions defined in this
 		 * class.
 		 */
 
-		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/fdwp-admin.css', array(), $this->version, 'all' );
+		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/kbwp-admin.css', array(), $this->version, 'all' );
 
 	}
 
@@ -86,15 +86,15 @@ class Fdwp_Admin {
 		/**
 		 *
 		 * An instance of this class should be passed to the run() function
-		 * defined in Fdwp_Loader as all of the hooks are defined
+		 * defined in Kbwp_Loader as all of the hooks are defined
 		 * in that particular class.
 		 *
-		 * The Fdwp_Loader will then create the relationship
+		 * The Kbwp_Loader will then create the relationship
 		 * between the defined hooks and the functions defined in this
 		 * class.
 		 */
 
-		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/fdwp-admin.js', array( 'jquery' ), $this->version, false );
+		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/kbwp-admin.js', array( 'jquery' ), $this->version, false );
 
 	}
 
@@ -104,18 +104,18 @@ class Fdwp_Admin {
 	 *
 	 * @since    1.0.0
 	 */
-	public function fdwp_faq_cpt() {
+	public function kbwp_knowledge_base_cpt() {
 
 		$labels = array(
-			'name' => _x('FAQ', 'post type general name'),
-			'singular_name' => _x('FAQ', 'post type singular name'),
-			'menu_name' => _x('FAQs', 'post type singular name'),
+			'name' => _x('Knowledge Base', 'post type general name'),
+			'singular_name' => _x('Knowledge Base', 'post type singular name'),
+			'menu_name' => _x('Knowledge Base', 'post type singular name'),
 			'add_new' => _x('Add new', 'ir'),
 			'add_new_item' => __('Add new FAQ'),
-			'edit_item' => __('Edit FAQ'),
-			'new_item' => __('New FAQ'),
-			'view_item' => __('View FAQ'),
-			'search_items' => __('Search FAQ'),
+			'edit_item' => __('Edit KB'),
+			'new_item' => __('New KB'),
+			'view_item' => __('View KB'),
+			'search_items' => __('Search KB'),
 			'not_found' =>  __('Nothing found'),
 			'not_found_in_trash' => __('Nothing found in trash'),
 			'parent_item_colon' => ''
@@ -141,10 +141,10 @@ class Fdwp_Admin {
 			'graphql_plural_name' => 'faqs',
 			'has_archive' => false,
 			'show_in_rest' => true,
-			'supports' => array('title', 'editor', 'excerpt')
+			'supports' => array('title', 'editor', 'excerpt'),
 		);
 
-		register_post_type( 'faq' , $args );
+		register_post_type( 'kb' , $args );
 
 	}
 
@@ -154,20 +154,20 @@ class Fdwp_Admin {
 	 *
 	 * @since    1.0.0
 	 */
-	public function fdwp_faq_tax() {
+	public function kbwp_knowledge_base_tax() {
 
 		$labels = array(
-			'name' => _x( 'FAQ Category', 'taxonomy general name' ),
-			'singular_name' => _x( 'FAQ Category', 'taxonomy singular name' ),
+			'name' => _x( 'Knowledge Base Category', 'taxonomy general name' ),
+			'singular_name' => _x( 'Knowledge Base Category', 'taxonomy singular name' ),
 			'search_items' =>  __( 'Search Category' ),
 			'all_items' => __( 'All Categories' ),
 			'parent_item' => __( 'Parent Category' ),
 			'parent_item_colon' => __( 'Parent Category:' ),
-			'edit_item' => __( 'Edit type' ),
-			'update_item' => __( 'Update type' ),
-			'add_new_item' => __( 'Add new type' ),
-			'new_item_name' => __( 'New type name' ),
-			'menu_name'         => __( 'Types' ),
+			'edit_item' => __( 'Edit Category' ),
+			'update_item' => __( 'Update Category' ),
+			'add_new_item' => __( 'Add new Category' ),
+			'new_item_name' => __( 'New Category name' ),
+			'menu_name'         => __( 'Category' )
 		  );
 	  
 		  $args = array(
@@ -176,9 +176,13 @@ class Fdwp_Admin {
 			'show_ui'           => true,
 			'show_admin_column' => true,
 			'query_var'         => true,
+			'show_in_graphql' => true,
+			'graphql_single_name' => 'kbTax',
+			'graphql_plural_name' => 'kbsTax',
+			'show_in_rest' => true
 		  );
 	  
-		  register_taxonomy( 'faq-cat', array( 'faq' ), $args );
+		  register_taxonomy( 'kb-cat', array( 'kb' ), $args );
 
 	}
 

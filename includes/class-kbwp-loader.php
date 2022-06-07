@@ -6,8 +6,8 @@
  * @link       ragudev.com
  * @since      1.0.0
  *
- * @package    Fdwp
- * @subpackage Fdwp/includes
+ * @package    Kbwp
+ * @subpackage Kbwp/includes
  */
 
 /**
@@ -17,11 +17,11 @@
  * the plugin, and register them with the WordPress API. Call the
  * run function to execute the list of actions and filters.
  *
- * @package    Fdwp
- * @subpackage Fdwp/includes
+ * @package    Kbwp
+ * @subpackage Kbwp/includes
  * @author     ragu <me@ragudev.com>
  */
-class Fdwp_Loader {
+class Kbwp_Loader {
 
 	/**
 	 * The array of actions registered with WordPress.

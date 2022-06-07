@@ -9,8 +9,8 @@
  * @link       ragudev.com
  * @since      1.0.0
  *
- * @package    Fdwp
- * @subpackage Fdwp/includes
+ * @package    Kbwp
+ * @subpackage Kbwp/includes
  */
 
 /**
@@ -20,11 +20,11 @@
  * so that it is ready for translation.
  *
  * @since      1.0.0
- * @package    Fdwp
- * @subpackage Fdwp/includes
+ * @package    Kbwp
+ * @subpackage Kbwp/includes
  * @author     ragu <me@ragudev.com>
  */
-class Fdwp_i18n {
+class Kbwp_i18n {
 
 
 	/**
@@ -35,7 +35,7 @@ class Fdwp_i18n {
 	public function load_plugin_textdomain() {
 
 		load_plugin_textdomain(
-			'fdwp',
+			'kbwp',
 			false,
 			dirname( dirname( plugin_basename( __FILE__ ) ) ) . '/languages/'
 		);
